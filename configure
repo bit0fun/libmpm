@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#Configure script for making the Mutli Precision Math library
+
+set -e
+set -u
+set -o pipefail
+
+
+#Default values for variables 
+LDSET=0
+PREFIX_dir=/usr/local
+
+
+
+
+#Displays Configure options
+usage() {
+	echo -e "Usage: $0 [options]\n\n"
+
+	echo "Configuration options:"
+	echo -e "\t-a   --static\t Creates library for static linkage (default)"
+	echo -e "\t-d   --dyn\t Creates library for dynamic linkage"
+
+	exit 1
+}
+
+
+#Parse arguments
+while getopts "had" opt; do
+	case ${opt} in
+		h ) #Display help
+			usage
+			exit 1
+			;;
+		a ) #Set Linker flag for static compile
+			LDSET=0
+			echo "LDSET is $LDSET"
+			;;
+		d ) #Set Linker flag to dynamic compile
+			LDSET=1
+			echo "LDSET is $LDSET"
+			;;
+		\? )
+			echo "Invalid option" >&2
+			exit 1
+			;;
+	esac
+done
+shift "$(($OPTIND -1))"
