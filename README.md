@@ -10,30 +10,30 @@ In no particular order, each of the following will be accomplished for this
 library. More will be added at some point in the future, but as this is in
 early development, the following should constitute version 1 once finished.
 ### General
--[X] Setup Build Environment
--[ ] Configuration Settings
+- [X] Setup Build Environment
+- [ ] Configuration Settings
 
--[ ] Verify Speed, memory useage
+- [ ] Verify Speed, memory useage
 
 ### Double Fixed Point Specific
--[ ] Type Conversion Functions
--[ ] Arithmetic Functions
--[ ] Trigonometry Functions
--[ ] Add useful Constants to file
--[ ] Parallelization
--[ ] Tests for all functions
+- [ ] Type Conversion Functions
+- [ ] Arithmetic Functions
+- [ ] Trigonometry Functions
+- [ ] Add useful Constants to file
+- [ ] Parallelization
+- [ ] Tests for all functions
 
 ### Symbolic Specific
--[ ] Type Conversion Functions
--[ ] Arithmetic Functions
--[ ] Trigonometry Functions
--[ ] Add useful Constants to file
--[ ] Parallelization
--[ ] Tests for all functions
+- [ ] Type Conversion Functions
+- [ ] Arithmetic Functions
+- [ ] Trigonometry Functions
+- [ ] Add useful Constants to file
+- [ ] Parallelization
+- [ ] Tests for all functions
 
 ### Settings to add
--[ ] Maximum precision size
--[ ] Disable Symbolic (useful if only need one)
--[ ] Disable Double Fixed Point (useful if only need one)
--[ ] Enable Parallelization
--[ ] Enable GPU Parallelization (CUDA ?)
+- [ ] Maximum precision size
+- [ ] Disable Symbolic (useful if only need one)
+- [ ] Disable Double Fixed Point (useful if only need one)
+- [ ] Enable Parallelization
+- [ ] Enable GPU Parallelization (CUDA ?)
