@@ -44,26 +44,35 @@ usage() {
 	exit 1
 }
 
+if [ $# -eq 0 ]; then
+	usage
+	exit 1
+	
+fi
+
+
 
 #Parse arguments
-while getopts "had" opt; do
-	case ${opt} in
-		h ) #Display help
-			usage
-			exit 1
-			;;
+for i in "$@"; do
+	case $i in
 		a ) #Set Linker flag for static compile
 			LDSET=0
 			echo "LDSET is $LDSET"
+			shift
 			;;
 		d ) #Set Linker flag to dynamic compile
 			LDSET=1
 			echo "LDSET is $LDSET"
+			shift
 			;;
 		\? )
 			echo "Invalid option" >&2
+			usage
+			exit 1
+			;;
+		h | * ) #Display help
+			usage
 			exit 1
 			;;
 	esac
 done
-shift "$(($OPTIND -1))"
